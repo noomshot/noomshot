@@ -1,0 +1,179 @@
+/* Mobile header: logo centered, hamburger right. Hamburger is out of flow
+   so it does not shift the logo off true center. Collapse matches Webflow medium (991px). */
+@media screen and (max-width: 991px) {
+  .div-container.navbar {
+    position: relative;
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .navbar-2 .logo-link.w--current {
+    margin-top: 0;
+  }
+
+  .navbar-2 .menu-button.w-nav-button {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    z-index: 2;
+    float: none;
+    transform: translateY(-50%);
+  }
+}
+
+/* Narrow viewports: Chrome's main-window floor is ~500px, which sits between
+   Webflow's 767 and 479 breakpoints. Stop grid/flex min-content from overflowing. */
+@media screen and (max-width: 767px) {
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .w-layout-grid,
+  .formula-grid,
+  .formula-sub-grid,
+  .formula-wrapper,
+  .hiring-grid,
+  .hiring-wrapper,
+  .hero-logo-wrapper,
+  .div-container,
+  .div-container-model,
+  .contact-form-block,
+  .form {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .formula-grid,
+  .hiring-grid {
+    width: 100%;
+  }
+
+  .formula-sub-grid,
+  .formula-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formula-subwrapper,
+  .formula-box,
+  .formula-box-2 {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .formula-box-2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hiring-table {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero-logo-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-logo,
+  .hero-logo.herman,
+  .hero-logo.bigger,
+  .hero-logo.amazon {
+    max-width: 90px;
+    height: auto;
+    margin: 8px 10px;
+  }
+
+  .title-h3-2 {
+    width: 100%;
+  }
+
+  .subheading-left {
+    margin-bottom: 32px;
+  }
+
+  .contact-form-block {
+    box-sizing: border-box;
+  }
+
+  .lottie-animation {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .div-container.navbar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .lottie-logo {
+    width: min(160px, calc(100vw - 88px));
+  }
+
+  .formula-grid {
+    width: 100%;
+  }
+
+  .hero-h1 {
+    overflow-wrap: break-word;
+  }
+
+  .contact-heading,
+  .about-heading,
+  .title-h3,
+  .title-h3l-left {
+    overflow-wrap: break-word;
+  }
+
+  .about-wrapper.flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .about-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shapes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .div-container,
+  .div-container.centered,
+  .div-container-model {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-h1 {
+    font-size: 32px;
+  }
+
+  .shapes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
